@@ -1,21 +1,14 @@
+// routes/serviceRoutes.js
 const express = require('express');
-const {
-  createService,
-  getAllServices,
-  getServiceById,
-  updateService,
-  deleteService,
-} = require('../controllers/ServiceController');
-
 const router = express.Router();
+const serviceController = require('../controllers/ServicesController');
 
-router.post('/', createService);
-router.get('/', getAllServices);
-router.get('/:id', getServiceById);
-router.patch('/:id', updateService);
-router.delete('/:id', deleteService);
+// CRUD Routes
+router.get('/', serviceController.getAllServices);
+router.get('/search', serviceController.searchServices);
+router.get('/:id', serviceController.getServiceById);
+router.post('/', serviceController.createService);
+router.put('/:id', serviceController.updateService);
+router.delete('/:id', serviceController.deleteService);
 
 module.exports = router;
-
-
-

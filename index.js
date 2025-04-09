@@ -24,6 +24,12 @@ const JournalVoucher = require("./routes/JournalVoucherRoute")
 const contraVoucher = require("./routes/contraVoucherRoutes")
 const paymentVoucher = require("./routes/paymentVoucherRoutes")
 const purchaseVoucher = require("./routes/purchaseVoucherRoutes")
+const invoiceTemplate = require("./routes/invoiceTemplateRoutes")
+const demoMembers = require("./routes/demoMembersRoutes")
+const DemoInvoices = require("./routes/DemoInvoiceRoutes")
+
+
+
 
 
 
@@ -88,6 +94,15 @@ app.use("/contraVoucher",contraVoucher);
 app.use("/paymentVoucher",paymentVoucher);
 
 app.use("/purchaseVoucher",purchaseVoucher);
+
+app.use("/invoiceTemplate",invoiceTemplate);
+
+app.use("/invoiceTemplate",invoiceTemplate);
+
+app.use("/demoMembers",demoMembers);
+
+app.use("/DemoInvoices",DemoInvoices);
+
 
 
 
